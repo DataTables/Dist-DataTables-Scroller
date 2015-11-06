@@ -1,11 +1,11 @@
-/*! Scroller 1.3.0
+/*! Scroller 1.4.0-dev
  * ©2011-2015 SpryMedia Ltd - datatables.net/license
  */
 
 /**
  * @summary     Scroller
  * @description Virtual rendering for DataTables
- * @version     1.3.0
+ * @version     1.4.0-dev
  * @file        dataTables.scroller.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
@@ -21,11 +21,35 @@
  * For details please refer to: http://www.datatables.net
  */
 
-(function(window, document, undefined){
+(function( factory ){
+	if ( typeof define === 'function' && define.amd ) {
+		// AMD
+		define( ['jquery', 'datatables.net'], function ( $ ) {
+			return factory( $, window, document );
+		} );
+	}
+	else if ( typeof exports === 'object' ) {
+		// CommonJS
+		module.exports = function (root, $) {
+			if ( ! root ) {
+				root = window;
+			}
 
+			if ( ! $ || ! $.fn.dataTable ) {
+				$ = require('datatables.net')(root, $).$;
+			}
 
-var factory = function( $, DataTable ) {
-"use strict";
+			return factory( $, root, root.document );
+		};
+	}
+	else {
+		// Browser
+		factory( jQuery, window, document );
+	}
+}(function( $, window, document, undefined ) {
+'use strict';
+var DataTable = $.fn.dataTable;
+
 
 /**
  * Scroller is a virtual rendering plug-in for DataTables which allows large
@@ -223,7 +247,7 @@ var Scroller = function ( dt, opts ) {
 
 
 
-Scroller.prototype = /** @lends Scroller.prototype */{
+$.extend( Scroller.prototype, {
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	 * Public methods
 	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -413,7 +437,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 
 		if ( bRedraw === undefined || bRedraw )
 		{
-			this.s.dt.oInstance.fnDraw();
+			this.s.dt.oInstance.fnDraw( false );
 		}
 	},
 
@@ -687,14 +711,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 		// If the virtual and physical height match, then we use a linear
 		// transform between the two, allowing the scrollbar to be linear
 		if ( heights.virtual === heights.scroll ) {
-			coeff = (heights.virtual-heights.viewport) / (heights.scroll-heights.viewport);
-
-			if ( dir === 'virtualToPhysical' ) {
-				return val / coeff;
-			}
-			else if ( dir === 'physicalToVirtual' ) {
-				return val * coeff;
-			}
+			return val;
 		}
 
 		// Otherwise, we want a non-linear scrollbar to take account of the
@@ -1003,7 +1020,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 			}
 		}
 	}
-};
+} );
 
 
 
@@ -1156,7 +1173,7 @@ Scroller.oDefaults = Scroller.defaults;
  *  @name      Scroller.version
  *  @static
  */
-Scroller.version = "1.3.0";
+Scroller.version = "1.4.0-dev";
 
 
 
@@ -1277,22 +1294,4 @@ Api.register( 'scroller.measure()', function ( redraw ) {
 
 
 return Scroller;
-}; // /factory
-
-
-// Define as an AMD module if possible
-if ( typeof define === 'function' && define.amd ) {
-	define( ['jquery', 'datatables'], factory );
-}
-else if ( typeof exports === 'object' ) {
-    // Node/CommonJS
-    factory( require('jquery'), require('datatables') );
-}
-else if ( jQuery && !jQuery.fn.dataTable.Scroller ) {
-	// Otherwise simply initialise as normal, stopping multiple evaluation
-	factory( jQuery, jQuery.fn.dataTable );
-}
-
-
-})(window, document);
-
+}));
