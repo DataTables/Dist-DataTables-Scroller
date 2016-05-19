@@ -1,6 +1,6 @@
 {
     "name": "datatables.net-scroller",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": "Scroller for DataTables ",
     "files": [
         "js/dataTables.scroller.js"
