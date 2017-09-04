@@ -3,7 +3,7 @@
     "version": "1.4.2",
     "description": "Scroller for DataTables ",
     "files": [
-        "js/dataTables.scroller.js"
+        "js/**/*.js"
     ],
     "main": "./js/dataTables.scroller.js",
     "keywords": [
