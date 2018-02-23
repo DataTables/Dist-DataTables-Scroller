@@ -5,7 +5,7 @@
     "files": [
         "js/**/*.js"
     ],
-    "main": "./js/dataTables.scroller.js",
+    "main": "js/dataTables.scroller.js",
     "keywords": [
         "virtual scrolling",
         "DataTables",
