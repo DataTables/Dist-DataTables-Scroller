@@ -6,6 +6,7 @@
         "js/**/*.js"
     ],
     "main": "js/dataTables.scroller.js",
+    "type": "types.d.ts",
     "keywords": [
         "virtual scrolling",
         "DataTables",
@@ -27,5 +28,8 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/DataTables/Dist-DataTables-Scroller.git"
+    },
+    "devDependencies": {
+        "@types/jquery": "^3.5.1"
     }
 }
