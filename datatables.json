@@ -8,5 +8,6 @@
         "types/types.d.ts"
     ],
     "src-repo": "http://github.com/DataTables/Scroller",
-    "last-tag": "2.0.4"
+    "last-tag": "2.0.4",
+    "last-sync": "698fc81a789a45def185362a60922decc8e0419c"
 }
