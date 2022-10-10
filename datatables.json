@@ -1,13 +1,14 @@
 {
     "js": [
         "js/dataTables.scroller.js",
-        "js/dataTables.scroller.min.js"
+        "js/dataTables.scroller.min.js",
+        "js/dataTables.scroller.min.mjs",
+        "js/dataTables.scroller.mjs"
     ],
     "css": [],
     "types": [
         "types/types.d.ts"
     ],
     "src-repo": "http://github.com/DataTables/Scroller",
-    "last-tag": "2.0.5",
-    "last-sync": "16c25787c0a754cfc28aadd5384a424704ee3cf3"
+    "last-tag": "2.0.7"
 }
