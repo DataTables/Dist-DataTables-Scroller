@@ -1,4 +1,4 @@
-/*! Scroller 2.0.7
+/*! Scroller 2.1.0
  * ©2011-2022 SpryMedia Ltd - datatables.net/license
  */
 
@@ -44,7 +44,7 @@ var DataTable = $.fn.dataTable;
 /**
  * @summary     Scroller
  * @description Virtual rendering for DataTables
- * @version     2.0.7
+ * @version     2.1.0
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   SpryMedia Ltd.
@@ -1233,7 +1233,7 @@ Scroller.oDefaults = Scroller.defaults;
  *  @name      Scroller.version
  *  @static
  */
-Scroller.version = "2.0.7";
+Scroller.version = "2.1.0";
 
 
 
