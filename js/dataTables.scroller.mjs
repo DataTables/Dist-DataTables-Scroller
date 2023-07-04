@@ -1,4 +1,4 @@
-/*! Scroller 2.2.0-dev
+/*! Scroller 2.2.0
  * © SpryMedia Ltd - datatables.net/license
  */
 
@@ -12,7 +12,7 @@ let $ = jQuery;
 /**
  * @summary     Scroller
  * @description Virtual rendering for DataTables
- * @version     2.2.0-dev
+ * @version     2.2.0
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   SpryMedia Ltd.
@@ -1180,7 +1180,7 @@ Scroller.oDefaults = Scroller.defaults;
  *  @name      Scroller.version
  *  @static
  */
-Scroller.version = '2.2.0-dev';
+Scroller.version = '2.2.0';
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Initialisation
