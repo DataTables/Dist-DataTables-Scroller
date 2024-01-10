@@ -543,6 +543,12 @@ $.extend(Scroller.prototype, {
 			}
 		});
 
+		dt.on('stateLoadParams.scroller', function (e, settings, data) {
+			if (data.scroller !== undefined) {
+				that.scrollToRow(data.scroller.topRow);
+			}
+		});
+
 		this.measure(false);
 
 		if (loadedState && loadedState.scroller) {
