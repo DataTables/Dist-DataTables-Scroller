@@ -1,4 +1,4 @@
-/*! Scroller 2.4.2
+/*! Scroller 2.4.3
  * © SpryMedia Ltd - datatables.net/license
  */
 
@@ -52,7 +52,7 @@ var DataTable = $.fn.dataTable;
 /**
  * @summary     Scroller
  * @description Virtual rendering for DataTables
- * @version     2.4.2
+ * @version     2.4.3
  * @copyright   SpryMedia Ltd.
  *
  * This source file is free software, available under the following license:
@@ -1288,7 +1288,7 @@ Scroller.oDefaults = Scroller.defaults;
  *  @name      Scroller.version
  *  @static
  */
-Scroller.version = '2.4.2';
+Scroller.version = '2.4.3';
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Initialisation
