@@ -645,7 +645,7 @@ $.extend(Scroller.prototype, {
 
 		// Want 3 rows in the sizing table so :first-child and :last-child
 		// CSS styles don't come into play - take the size of the middle row
-		$('tbody tr:lt(4)', origTable).clone().appendTo(tbody);
+		$(origTable).children('tbody > tr:lt(4)').clone().appendTo(tbody);
 		var rowsCount = $('tr', tbody).length;
 
 		if (rowsCount === 1) {
