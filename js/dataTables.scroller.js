@@ -1,4 +1,4 @@
-/*! Scroller 3.0.0-beta.1 for DataTables
+/*! Scroller 3.0.0 for DataTables
  * Copyright (c) SpryMedia Ltd - datatables.net/license
  */
 
@@ -885,7 +885,7 @@ Scroller.defaults = {
 /**
  * Scroller version
  */
-Scroller.version = '3.0.0-beta.1';
+Scroller.version = '3.0.0';
 
 
 // Attach Scroller to DataTables so it can be accessed as an 'extra'
