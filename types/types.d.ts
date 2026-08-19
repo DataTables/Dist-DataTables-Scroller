@@ -168,7 +168,7 @@ declare class Scroller {
 }
 
 declare module 'datatables.net' {
-    interface Config {
+    interface Options {
         /**
          * Scroller extension options
          */
