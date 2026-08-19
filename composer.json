@@ -1,6 +1,6 @@
 {
     "name": "datatables.net/datatables.net-scroller",
-    "description": "Scroller is a virtual rendering plug-in for DataTables which allows large datasets to be drawn on screen very quickly. Virtual rendering means is that only the visible portion of the table is drawn, while the scrolling container gives the visual impression that the whole table is visible, allowing excellent browser performance. This is Scroller for DataTables",
+    "description": "Scroller for DataTables",
     "support": {
         "forum": "https://datatables.net/forums",
         "source": "https://github.com/DataTables/Dist-DataTables-Scroller"
@@ -25,6 +25,6 @@
         "table"
     ],
     "require": {
-        "datatables.net/datatables.net": ">=1.12.1"
+        "datatables.net/datatables.net": "^3"
     }
 }
