@@ -45,8 +45,8 @@ var Dom = DataTable.Dom;
 var Api = DataTable.Api;
 var util = DataTable.util;
 
-if (!DataTable || !DataTable.versionCheck || !DataTable.versionCheck('3')) {
-    throw 'Warning: AutoFill requires DataTables 3 or greater';
+if (!DataTable || !DataTable.versionCheck || !DataTable.versionCheck('3.1')) {
+    throw 'Warning: Scroller requires DataTables 3.1 or greater';
 }
 /**
  * Scroller is a virtual rendering plug-in for DataTables which allows large
@@ -951,7 +951,7 @@ Api.register('scroller.page()', function () {
 });
 // Attach a listener to the document which listens for DataTables initialisation
 // events so we can automatically initialise
-Dom.s(document).on('preInit.dt.dtscroller', function (e, settings) {
+Dom.on('preInit.dt.dtscroller', function (e, settings) {
     if (e.namespace !== 'dt') {
         return;
     }
