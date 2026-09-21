@@ -1,14 +1,13 @@
 {
     "name": "datatables.net-scroller",
     "description": "Scroller for DataTables",
-    "main": "js/dataTables.scroller.js",
-    "module": "js/dataTables.scroller.mjs",
+    "main": "./js/dataTables.scroller.js",
+    "module": "./js/dataTables.scroller.mjs",
     "types": "./types/types.d.ts",
     "version": "3.0.0",
     "files": [
-        "js/**/*.js",
-        "js/**/*.mjs",
-        "types/**/*.d.ts"
+        "js",
+        "types"
     ],
     "keywords": [
         "Scroller",
@@ -31,5 +30,16 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DataTables/Scroller.git"
-    }
+    },
+    "exports": {
+        ".": {
+            "types": "./types/types.d.ts",
+            "import": "./js/dataTables.scroller.mjs",
+            "default": "./js/dataTables.scroller.mjs",
+            "require": "./js/dataTables.scroller.js"
+        },
+        "./js/*": "./js/*",
+        "./package.json": "./package.json"
+    },
+    "sideEffects": true
 }
