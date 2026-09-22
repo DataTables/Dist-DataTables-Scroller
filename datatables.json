@@ -10,6 +10,6 @@
         "types/types.d.ts"
     ],
     "src-repo": "http://github.com/DataTables/Scroller",
-    "last-tag": "3.0.0",
+    "last-tag": "3.1.0",
     "last-sync": "f3a7546ea9c4a67be4402f7fee4db82f2cb6ac81"
 }
