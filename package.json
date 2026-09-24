@@ -35,8 +35,8 @@
         ".": {
             "types": "./types/types.d.ts",
             "import": "./js/dataTables.scroller.mjs",
-            "default": "./js/dataTables.scroller.mjs",
-            "require": "./js/dataTables.scroller.js"
+            "require": "./js/dataTables.scroller.js",
+            "default": "./js/dataTables.scroller.mjs"
         },
         "./js/*": "./js/*",
         "./package.json": "./package.json"
