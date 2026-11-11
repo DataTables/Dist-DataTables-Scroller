@@ -26,7 +26,7 @@ export { default } from 'datatables.net';
  * * Easy to use
  */
 declare class Scroller {
-    static defaults: Defaults;
+    static defaults: ScrollerDefaults;
     /**
      * Scroller version
      */
@@ -174,6 +174,12 @@ declare module 'datatables.net' {
          */
         scroller?: boolean | Config;
     }
+    interface Defaults {
+        /**
+         * Scroller extension options
+         */
+        scroller?: ScrollerDefaults;
+    }
     interface Api<T> {
         /**
          * Scroller methods container
@@ -214,7 +220,7 @@ declare module 'datatables.net' {
         };
     }
 }
-interface Defaults {
+interface ScrollerDefaults {
     /**
      * Scroller uses the boundary scaling factor to decide when to redraw the
      * table - which it typically does before you reach the end of the currently
@@ -240,7 +246,7 @@ interface Defaults {
      */
     serverWait: number;
 }
-interface Config extends Partial<Defaults> {
+interface Config extends Partial<ScrollerDefaults> {
 }
 interface ApiScrollerMethods<T> {
     /**
@@ -361,4 +367,4 @@ interface DomInternal {
     table: Dom;
 }
 
-export type { Config, Defaults, DomInternal, Settings };
+export type { Config, DomInternal, ScrollerDefaults, Settings };
